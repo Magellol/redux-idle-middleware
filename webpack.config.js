@@ -49,6 +49,10 @@ const config = {
     //   sourceMap: true,
     // }),
   ],
+
+  // @todo
+  //  KICK OUT REDUX FROM THE BUNDLE YO
+  externals: {}
 };
 
 module.exports = config;

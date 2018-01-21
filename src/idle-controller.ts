@@ -49,6 +49,10 @@ export const idleControllerFactory = (options: {
       let timeout = startUserIdleTimeout();
 
       const handleEvent: EventListener = throttle(() => {
+        /**
+         * While we're unscrubsribing from events, new events might come up.
+         * For these we don't want to fire anymore action even if the listener hasn't been plugged out yet.
+         */
         if (hasListenerAttached === false) {
           return;
         }
