@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { REDUX_IDLE_ACTION_TYPE } from './middleware';
+import { REDUX_IDLE_ACTION_TYPE } from './action';
 
 export type IdleReducerFactory = () => Reducer<boolean>;
 

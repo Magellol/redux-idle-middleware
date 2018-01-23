@@ -1,2 +1,3 @@
 export { idleReducer } from './reducer';
-export { idleMiddleware, REDUX_IDLE_ACTION_TYPE } from './middleware';
+export { idleMiddleware } from './middleware';
+export { REDUX_IDLE_ACTION_TYPE, createIdleUpdateAction } from './action';
