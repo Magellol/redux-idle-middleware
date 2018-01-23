@@ -5,7 +5,12 @@ export type IdleMiddlewareFactory = (
   options: { timeToWaitBeforeIdleness: number },
 ) => Middleware;
 
-export const REDUX_IDLE_ACTION_TYPE = 'REDUX_IDLE_UPDATE';
+export interface IdleUpdateAction {
+  type: typeof REDUX_IDLE_ACTION_TYPE;
+  isIdle: boolean;
+}
+
+export const REDUX_IDLE_ACTION_TYPE = 'REDUX_IDLE_STATUS_UPDATE';
 
 export const idleMiddleware: IdleMiddlewareFactory = ({
   timeToWaitBeforeIdleness,
@@ -15,9 +20,10 @@ export const idleMiddleware: IdleMiddlewareFactory = ({
   });
 
   return middlewareApi => {
-    controller.subscribe(isIdle =>
-      middlewareApi.dispatch({ isIdle, type: REDUX_IDLE_ACTION_TYPE }),
-    );
+    controller.subscribe(isIdle => {
+      const action: IdleUpdateAction = { isIdle, type: REDUX_IDLE_ACTION_TYPE };
+      middlewareApi.dispatch(action);
+    });
 
     return next => action => next(action);
   };
