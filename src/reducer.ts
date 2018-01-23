@@ -1,8 +1,7 @@
 import { Reducer } from 'redux';
+import { REDUX_IDLE_ACTION_TYPE } from './middleware';
 
 export type UserIdlenessReducerFactory = () => Reducer<boolean>;
-
-export const REDUX_IDLE_ACTION_TYPE = 'REDUX_IDLE_UPDATE';
 
 export const userIdlenessReducer: UserIdlenessReducerFactory = () => {
   return (state = false, action) => {

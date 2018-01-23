@@ -1,10 +1,11 @@
 import { Middleware } from 'redux';
 import { idleControllerFactory } from './idle-controller';
-import { REDUX_IDLE_ACTION_TYPE } from './reducer';
 
 export type IdleMiddlewareFactory = (
   options: { timeToWaitBeforeIdleness: number },
 ) => Middleware;
+
+export const REDUX_IDLE_ACTION_TYPE = 'REDUX_IDLE_UPDATE';
 
 export const idleMiddleware: IdleMiddlewareFactory = ({
   timeToWaitBeforeIdleness,

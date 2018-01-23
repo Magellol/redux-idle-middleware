@@ -1,2 +1,2 @@
-export * from './reducer';
-export * from './middleware';
+export { userIdlenessReducer } from './reducer';
+export { idleMiddleware } from './middleware';
