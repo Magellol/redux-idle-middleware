@@ -1,4 +1,5 @@
-import { throttle } from 'lodash-es';
+/** `@types/lodash.throttle` seems to have some issues. import * as lodash.throttle cannot be used. */
+const throttle = require('lodash.throttle');
 
 export type Listener = (isIdle: boolean) => void;
 
