@@ -49,10 +49,14 @@ const config = {
     //   sourceMap: true,
     // }),
   ],
-
-  // @todo
-  //  KICK OUT REDUX FROM THE BUNDLE YO
-  externals: {}
+  externals: {
+    redux: {
+      root: 'Redux',
+      commonjs: 'redux',
+      commonjs2: 'redux',
+      amd: 'redux',
+    },
+  },
 };
 
 module.exports = config;
