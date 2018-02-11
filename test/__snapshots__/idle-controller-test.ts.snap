@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`idleControllerFactory idleController#subscribe should throw if it does not receive a function as argument. 1`] = `"Expected \\"subscribe\\" to get a function as argument."`;
+
+exports[`idleControllerFactory idleController#subscribe should throw if we are trying to subscribe multiple times without cancelling. 1`] = `"This idle controller has already one listener attached to it. Multiple listeners is not currently supported."`;
