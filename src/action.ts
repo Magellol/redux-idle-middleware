@@ -1,6 +1,6 @@
-export const REDUX_IDLE_ACTION_TYPE = 'REDUX_IDLE_STATUS_UPDATE';
+export const REDUX_IDLE_ACTION_TYPE = '@@REDUX_IDLE_IDLENESS_UPDATE';
 
-export const createIdleUpdateAction = (isIdle: boolean) => ({
+export const createIdlenessUpdateAction = (isIdle: boolean) => ({
   isIdle,
   type: REDUX_IDLE_ACTION_TYPE,
 });

@@ -18,7 +18,7 @@ export const idleControllerFactory = (options: {
   let hasListenerAttached = false;
   let isUserIdle = false;
 
-  const listenToEvents = (listener: EventListener) =>
+  const subscribeToEvents = (listener: EventListener) =>
     events.forEach(event => window.addEventListener(event, listener, true));
 
   const unsubscribeFromEvents = (listener: EventListener) =>
@@ -66,7 +66,7 @@ export const idleControllerFactory = (options: {
         timeout = startUserIdleTimeout();
       }, 1000);
 
-      listenToEvents(handleEvent);
+      subscribeToEvents(handleEvent);
 
       return () => {
         hasListenerAttached = false;

@@ -1,6 +1,6 @@
 import { Middleware } from 'redux';
 import { idleControllerFactory } from './idle-controller';
-import { createIdleUpdateAction } from './action';
+import { createIdlenessUpdateAction } from './action';
 
 export type IdleMiddlewareFactory = (
   options: { timeToWaitBeforeIdleness: number },
@@ -15,7 +15,7 @@ export const idleMiddleware: IdleMiddlewareFactory = ({
 
   return middlewareApi => {
     controller.subscribe(isIdle => {
-      middlewareApi.dispatch(createIdleUpdateAction(isIdle));
+      middlewareApi.dispatch(createIdlenessUpdateAction(isIdle));
     });
 
     return next => action => next(action);
