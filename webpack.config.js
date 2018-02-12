@@ -44,10 +44,10 @@ const config = {
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   comments: false,
-    //   sourceMap: true,
-    // }),
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false,
+      sourceMap: true,
+    }),
   ],
   externals: {
     redux: {

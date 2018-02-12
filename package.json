@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "rm -rf ./dist && webpack --config webpack.config.js",
+    "prepublishOnly": "npm t && npm run build",
     "test": "jest"
   },
   "prettier": {
