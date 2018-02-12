@@ -7,6 +7,7 @@
   "peerDependencies": {
     "redux": ">=3.0.0"
   },
+  "files": ["dist/*"],
   "dependencies": {
     "lodash.throttle": "4.1.1"
   },
