@@ -4,12 +4,12 @@ Redux middleware and reducer to update your store when your user goes idle.
 
 ## Table of Contents
 
-* [Installation][#installation]
-* [Quickstart][#quickstart]
-* [API][#api]
-* [Contribute][#contribute]
-* [Misc][#misc]
-* [License][#license]
+* [Installation](#installation)
+* [Quickstart](#quickstart)
+* [API](#api)
+* [Contribute](#contribute)
+* [Misc](#misc)
+* [License](#license)
 
 ## Installation
 
@@ -51,7 +51,7 @@ The following are part of the public API and can be imported from `redux-idle`.
 
 This provided reducer factory can be plugged into your state and automatically update some part of it out of the box. You choose to which part of the state it gets plugged in, `isUserIdle` is just for the example.
 
-_Usage_
+**Usage**
 
 ```ts
 import { combineReducers } from 'redux';
@@ -75,7 +75,7 @@ This provided middleware factory can be configured and used when creating the re
 }
 ```
 
-_Usage_
+**Usage**
 
 ```ts
 import { createStore, applyMiddleware } from 'redux';
@@ -93,7 +93,7 @@ const store = createStore(rootReducer, applyMiddleware(loadedIdleMiddleware));
 
 This is the action type that's being dispatched by the idle middleware. Usually, if you use the provided reducer you are not going to need this. Although, for some cases if you need to react on this action in some other reducer, you can use it.
 
-_Usage_
+**Usage**
 
 ```ts
 import { REDUX_IDLE_ACTION_TYPE } from 'redux-idle';
