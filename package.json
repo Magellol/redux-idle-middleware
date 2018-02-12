@@ -1,5 +1,5 @@
 {
-  "name": "redux-idle",
+  "name": "redux-idle-middleware",
   "version": "0.0.1",
   "description": "Redux middleware to be notified when your users go idle",
   "main": "dist/redux-idle.js",

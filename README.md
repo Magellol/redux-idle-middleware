@@ -14,16 +14,16 @@ Redux middleware and reducer to update your store when your user goes idle.
 ## Installation
 
 ```bash
-npm i redux-idle
+npm i redux-idle-middleware
 ```
 
-`redux-idle` has a peer dependency over `redux`. You will get a warning if it's not already installed in your node nodules.
+`redux-idle-middleware` has a peer dependency over `redux`. You will get a warning if it's not already installed in your node nodules.
 
 ## Quickstart
 
 ```ts
 import { combineReducers, createStore, applyMiddleware } from 'redux';
-import { idleMiddleware, idleReducer } from 'redux-idle';
+import { idleMiddleware, idleReducer } from 'redux-idle-middleware';
 
 /**
  * Use the provided reducer to quickly update some part of your state.
@@ -45,7 +45,7 @@ const store = createStore(rootReducer, applyMiddleware(loadedIdleMiddleware));
 
 ## API
 
-The following are part of the public API and can be imported from `redux-idle`.
+The following are part of the public API and can be imported from `redux-idle-middleware`.
 
 ### `idleReducer`
 
@@ -55,7 +55,7 @@ This provided reducer factory can be plugged into your state and automatically u
 
 ```ts
 import { combineReducers } from 'redux';
-import { idleReducer } from 'redux-idle';
+import { idleReducer } from 'redux-idle-middleware';
 
 const rootReducer = combineReducers({
   isUserIdle: idleReducer(),
@@ -69,7 +69,7 @@ This provided middleware factory can be configured and used when creating the re
 ```ts
 {
   /**
-   * How much time must enlapse before `redux-idle` considers the current user to be idle. The value is in **milliseconds**
+   * How much time must enlapse before `redux-idle-middleware` considers the current user to be idle. The value is in **milliseconds**
    */
   timeToWaitBeforeIdleness: number;
 }
@@ -79,7 +79,7 @@ This provided middleware factory can be configured and used when creating the re
 
 ```ts
 import { createStore, applyMiddleware } from 'redux';
-import { idleMiddleware } from 'redux-idle';
+import { idleMiddleware } from 'redux-idle-middleware';
 
 const rootReducer = ...;
 const loadedIdleMiddleware = idleMiddleware({
@@ -96,7 +96,7 @@ This is the action type that's being dispatched by the idle middleware. Usually,
 **Usage**
 
 ```ts
-import { REDUX_IDLE_ACTION_TYPE } from 'redux-idle';
+import { REDUX_IDLE_ACTION_TYPE } from 'redux-idle-middleware';
 
 const bannerReducer = (state, action) => {
   if (action.type === REDUX_IDLE_ACTION_TYPE) {
