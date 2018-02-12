@@ -2,7 +2,8 @@
   "name": "redux-idle",
   "version": "0.0.1",
   "description": "Redux middleware to be notified when your users go idle",
-  "main": "index.js",
+  "main": "dist/redux-idle.js",
+  "types": "dist/src/index.d.ts",
   "peerDependencies": {
     "redux": ">=3.0.0"
   },
