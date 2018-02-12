@@ -131,6 +131,8 @@ npm run build
 
 This aims to be a simple middleware you can plug into your store and gives you a `boolean` if your user is considered _idle_ or not. It doesn't do more than that.
 
+_This project has been inspired by the excellent [react-idle](https://github.com/ReactTraining/react-idle)._
+
 ### Bundlephobia
 
 TBD.
