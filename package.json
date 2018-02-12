@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Redux middleware to be notified when your users go idle",
   "main": "index.js",
+  "peerDependencies": {
+    "redux": ">=3.0.0"
+  },
   "dependencies": {
     "lodash.throttle": "4.1.1"
   },
