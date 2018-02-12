@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/Magellol/redux-idle-middleware.svg?branch=master)](https://travis-ci.org/Magellol/redux-idle-middleware)
 
-# Redux Idle
+# Redux Idle Middleware
 
-Redux middleware and reducer to update your store when your user goes idle.
+Small Redux middleware and reducer to update your store when your user goes idle. (~1.80 kB gzipped)
 
 ## Table of Contents
 
